@@ -19,7 +19,7 @@ include_once ("../globals.php");
   <!--<frame src="<?php echo $rootdir;?>/login/filler.php" name="Filler Bottom" scrolling="no" noresize frameborder="NO">-->
 </frameset>
 
-<noframes><body bgcolor="#FFFFFF">
+<noframes><body bgcolor="#FFFFFE">
 
 </body></noframes>
 
