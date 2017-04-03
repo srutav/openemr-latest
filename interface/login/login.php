@@ -211,7 +211,7 @@ $ip=$_SERVER['REMOTE_ADDR'];
 </div>
 <div style="clear: both;"> </div>
 <div class="version">
-<?php echo "v".text($openemr_version) ?> | <a  href="../../acknowledge_license_cert.html" target="main"><?php echo xlt('Acknowledgments, Licensing and Certification'); ?></a>
+<?php echo "v".text($openemr_version) ?> | <a  href="../../acknowledge_license_cert.html" target="main"><?php echo xlt('Acknowledgments, Licensing and Certification changed on 04/03/2017'); ?></a>
 </div>
 </div>
 <div class="demo">
