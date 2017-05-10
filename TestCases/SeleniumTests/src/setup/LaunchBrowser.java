@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
@@ -12,6 +12,9 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class LaunchBrowser {
 	//public static HtmlUnitDriver driver;
@@ -30,7 +33,18 @@ public class LaunchBrowser {
 
         // Start Firefox driver
        driver = new FirefoxDriver(firefoxBinary, null);*/
-		driver=new FirefoxDriver();
+		//driver=new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+            	options.setBinary("/usr/bin/google-chrome-stable");
+			//ChromeOptions options = new ChromeOptions();
+			//options.setExperimentalOption("prefs", chromePrefs);
+			DesiredCapabilities cap = DesiredCapabilities.chrome();
+			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			cap.setCapability(ChromeOptions.CAPABILITY, options);
+			
+				
+			 driver = new ChromeDriver(cap);
 
 		
 //driver=new PhantomJSDriver();
