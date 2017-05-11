@@ -37,7 +37,7 @@ public class LaunchBrowser {
 		System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
 		//System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
 		ChromeOptions options = new ChromeOptions();
-            	options.setBinary("/usr/bin/google-chrome-stable");
+            	options.setBinary("binary","/opt/google/chrome/google-chrome");
 		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });
 			//ChromeOptions options = new ChromeOptions();
 			//options.setExperimentalOption("prefs", chromePrefs);
