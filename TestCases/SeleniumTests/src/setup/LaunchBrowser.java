@@ -38,6 +38,7 @@ public class LaunchBrowser {
 		//System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
 		ChromeOptions options = new ChromeOptions();
             	options.setBinary("/usr/bin/google-chrome-stable");
+		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });
 			//ChromeOptions options = new ChromeOptions();
 			//options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
@@ -45,7 +46,7 @@ public class LaunchBrowser {
 			cap.setCapability(ChromeOptions.CAPABILITY, options);
 			
 				
-			 driver = new ChromeDriver(cap);
+			 driver = new ChromeDriver(options);
 
 		
 //driver=new PhantomJSDriver();
