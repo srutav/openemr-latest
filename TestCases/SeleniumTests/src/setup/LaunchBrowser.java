@@ -46,7 +46,7 @@ public class LaunchBrowser {
 			cap.setCapability(ChromeOptions.CAPABILITY, options);
 			
 				
-			 driver = new ChromeDriver(options);
+			 driver = new ChromeDriver(cap);
 
 		
 //driver=new PhantomJSDriver();
