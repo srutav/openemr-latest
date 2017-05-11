@@ -35,8 +35,9 @@ public class LaunchBrowser {
        driver = new FirefoxDriver(firefoxBinary, null);*/
 		//driver=new FirefoxDriver();
 		System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
+		//System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
 		ChromeOptions options = new ChromeOptions();
-            	options.setBinary("/opt/google/chrome/google-chrome");
+            	options.setBinary("/usr/bin/google-chrome-stable");
 			//ChromeOptions options = new ChromeOptions();
 			//options.setExperimentalOption("prefs", chromePrefs);
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
