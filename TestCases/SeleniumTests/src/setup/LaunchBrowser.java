@@ -33,20 +33,20 @@ public class LaunchBrowser {
 
         // Start Firefox driver
        driver = new FirefoxDriver(firefoxBinary, null);*/
-		//driver=new FirefoxDriver();
-		System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
+		driver=new FirefoxDriver();
 		//System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
-		ChromeOptions options = new ChromeOptions();
-            	options.setBinary("/usr/bin/google-chrome");
-		options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });
+		//System.setProperty("webdriver.chrome.driver","/opt/google/chrome/chromedriver");
+		//ChromeOptions options = new ChromeOptions();
+            	//options.setBinary("/usr/bin/google-chrome");
+		//options.addArguments(new String[] { "chrome.switches", "--disable-extensions" });
 			//ChromeOptions options = new ChromeOptions();
 			//options.setExperimentalOption("prefs", chromePrefs);
-			DesiredCapabilities cap = DesiredCapabilities.chrome();
-			cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-			cap.setCapability(ChromeOptions.CAPABILITY, options);
+			//DesiredCapabilities cap = DesiredCapabilities.chrome();
+			//cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			//cap.setCapability(ChromeOptions.CAPABILITY, options);
 			
 				
-			 driver = new ChromeDriver(cap);
+			 //driver = new ChromeDriver(cap);
 
 		
 //driver=new PhantomJSDriver();
