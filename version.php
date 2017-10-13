@@ -1,4 +1,4 @@
-8<?php
+<?php
 // Software version identification.
 // This is used for display purposes, and also the major/minor/patch
 // numbers are stored in the database and used to determine which sql
