@@ -1,4 +1,4 @@
 --liquibase formatted sql
---changeset DevOpsTeam:11
-insert into users (id, username,fname) values (10,'user10','User10');
+--changeset DevOpsTeam:12
+insert into users (id, username) values (101,'test10');
 
