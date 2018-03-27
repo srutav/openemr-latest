@@ -26,9 +26,9 @@ public class Test1 {
 
 	@Test()
 	public void checkHeader(){
-		//driver=LaunchBrowser.returnDriver();
+		driver=LaunchBrowser.returnDriver();
 		String title=driver.getTitle();
-		Assert.assertEquals("Login", "Login");
+		Assert.assertEquals(title, "Login");
 
 	}
 
@@ -36,17 +36,16 @@ public class Test1 {
 
 	public void login(){
 
-		Assert.assertEquals("Login", "Login");
-		//WebElement mainFrame=driver.findElement(By.xpath("//frameset/frame[3]"));
+		WebElement mainFrame=driver.findElement(By.xpath("//frameset/frame[3]"));
 
-		//driver.switchTo().defaultContent();
-		//driver.switchTo().frame(mainFrame);
+		driver.switchTo().defaultContent();
+		driver.switchTo().frame(mainFrame);
 		//System.out.println(driver.getPageSource());
 		//WebElement testElement=driver.findElement(By.xpath("//table"));
 		//System.out.println(testElement.getAttribute("width"));
-		//driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@name='authUser']")).sendKeys("admin");
-		//driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@name='clearPass']")).sendKeys("admin123");
-		//driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@value='Login']")).click();
+		driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@name='authUser']")).sendKeys("admin");
+		driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@name='clearPass']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@value='Login']")).click();
 
 	}
 
