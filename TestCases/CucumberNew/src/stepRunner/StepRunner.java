@@ -26,12 +26,15 @@ public class StepRunner {
 	public void browser_is_launched_proper_and_login_page_is_loaded() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		//throw new PendingException();
-		BufferedReader br=new BufferedReader(new FileReader("/tmp/elb-dns.txt"));
-		String url=br.readLine();
+		//BufferedReader br=new BufferedReader(new FileReader("/tmp/elb-dns.txt"));
+		//String url=br.readLine();
 		driver=new FirefoxDriver();
-		driver.get(url);
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		driver.get("https://s3-us-west-2.amazonaws.com/cicdpoc/elb-dns.txt");
+		String url1=driver.findElement(By.xpath("//body")).getText();
+		driver.get(url1);
 	}
 
 	@When("^We add wrong credentials$")
@@ -42,7 +45,7 @@ public class StepRunner {
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame(mainFrame);
 		driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@name='authUser']")).sendKeys("admin");
-		driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@name='clearPass']")).sendKeys("admin123");
+		driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@name='clearPass']")).sendKeys("admin");
 		driver.findElement(By.xpath("//form[@name='login_form']/table//div[@class='login-box']//div[@class='table-right']/table//input[@value='Login']")).click();
 		// Write code here that turns the phrase above into concrete actions
 		//throw new PendingException();
