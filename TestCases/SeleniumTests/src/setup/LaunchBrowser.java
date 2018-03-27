@@ -72,7 +72,7 @@ public class LaunchBrowser {
 		}*/
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(url);
+		driver.get("http://secondtest.m4hxdigzpf.us-west-2.elasticbeanstalk.com/interface/login/login_frame.php?site=default");
 	}
 		
 
