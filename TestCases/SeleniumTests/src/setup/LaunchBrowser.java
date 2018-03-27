@@ -72,7 +72,9 @@ public class LaunchBrowser {
 		}*/
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("http://secondtest.m4hxdigzpf.us-west-2.elasticbeanstalk.com/interface/login/login_frame.php?site=default");
+		driver.get("https://s3-us-west-2.amazonaws.com/cicdpoc/elb-dns.txt");
+		String url1=driver.findElement(By.xpath("//body")).getText();
+		driver.get(url1);
 	}
 		
 
